@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { ThemeProvider } from "@material-tailwind/react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -33,3 +34,12 @@ export default function RootLayout({
     </html>
   );
 }
+
+// Wrapping the entire application with the Theme Provider 
+// export default function MyApp({ Component, pageProps }) {
+//   return (
+//     <ThemeProvider>
+//       <Component {...pageProps} />
+//     </ThemeProvider>
+//   );
+// }
