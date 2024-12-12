@@ -7,7 +7,12 @@ module.exports = withMT({
     
   ],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        '11': '2.75rem',
+      }
+
+    },
   },
   plugins: [],
 });

@@ -13,45 +13,35 @@ import {
  
 export default function SimpleForm() {
   return (
-     <Card color="transparent" shadow={false} {...{} as any}>
+     <Card color="transparent" shadow={false} className="max-w-md-300 mx-auto p-4 rounded-md justify-center items-center" {...{} as any}>
       <Typography variant="h4" color="blue-gray" {...{} as any}>
        Contact Us Today
       </Typography>
       <Typography color="gray" className="mt-1 font-normal" {...{} as any}>
         Enter your details and one of our team members will reach out to you soon
       </Typography>
-      <form className="mt-8 mb-2 w-80 lg:w-500 sm:w-96">
+      <form>
         <div className="mb-1 flex flex-col gap-6">
-          <Typography variant="h6" color="blue-gray" className="-mb-3" {...{} as any}>
-            First Name
-          </Typography>
           <Input
             size="lg"
-            placeholder="John"
+            label="First Name"
+            className=" !border-t-blue-gray-200 focus:!border-t-gray-900  -mb-4"
+            {...{} as any}
+          />
+          <br/>
+          <Input
+            size="lg"
+            label="Doe"
             className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
             labelProps={{
               className: "before:content-none after:content-none",
             }}
             {...{} as any}
           />
-          <Typography variant="h6" color="blue-gray" className="-mb-3" {...{} as any}>
-            Last Name
-          </Typography>
+         <br/>
           <Input
             size="lg"
-            placeholder="Doe"
-            className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
-            labelProps={{
-              className: "before:content-none after:content-none",
-            }}
-            {...{} as any}
-          />
-          <Typography variant="h6" color="blue-gray" className="-mb-3" {...{} as any}>
-            Your Email
-          </Typography>
-          <Input
-            size="lg"
-            placeholder="name@gmail.com"
+            label="name@gmail.com"
             className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
             labelProps={{
               className: "before:content-none after:content-none",
@@ -59,12 +49,10 @@ export default function SimpleForm() {
             {...{} as any}
           />
           <div>
-          <Typography variant="h6" color="blue-gray" className="-mb-3" {...{} as any}>
-            Phone Number
-          </Typography>
+          <br/>
           <Input
             maxLength={16}
-            placeholder= "e.g +27 75 342 1009"
+            label= "e.g +27 75 342 1009"
             pattern="^\+\d{1,3}\s\d{1,4}-\d{1,4}-\d{4}$"
             className="appearance-none !border-t-blue-gray-200 placeholder:text-blue-gray-300 placeholder:opacity-100 focus:!border-t-gray-900 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
         labelProps={{
@@ -95,7 +83,6 @@ export default function SimpleForm() {
               </div>
         </div>
         <div>
-          <Typography variant="h6" color="black" className="mt-6" {...{} as any}>Subject Matter</Typography>
           <div className="mt-5 w-75">
             <Select label="Services" {...{} as any}>
               <Option {...{} as any}>Maintenance</Option>
@@ -113,8 +100,8 @@ export default function SimpleForm() {
               </div>
           </div>
         </div>
-      <div className="mt-6">
-        <Typography variant="h6" color="black" {...{} as any}>General Comment</Typography>
+      <br/>
+      <div>
         <div className="w-96">
           <Textarea label="Leave a comment here..."{...{} as any}/>
         </div>
