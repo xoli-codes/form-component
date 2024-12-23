@@ -1,16 +1,13 @@
 const withMT = require("@material-tailwind/react/utils/withMT");
  
 module.exports = withMT({
-  content: [ 
-    "./pages/**/*.{js,ts,jsx,tsx}", //project files
-    "./node_modules/@material-tailwind/react/**/*.js", // Material Tailwind
-    
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      spacing: {
-        '11': '2.75rem',
-      }
 
     },
   },
